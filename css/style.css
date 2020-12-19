@@ -1,0 +1,266 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#userid-section {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  z-index: 2;
+}
+
+#userid-section .userid__container {
+  height: 30rem;
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ef476f;
+  color: #ffffff;
+}
+
+#userid-section .userid__container .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#userid-section .userid__container .about p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#userid-section .userid__container form {
+  text-align: center;
+}
+
+#userid-section .userid__container form label,
+#userid-section .userid__container form input {
+  font-size: 2rem;
+}
+
+#userid-section .userid__container form input {
+  outline: none;
+  margin: 1rem;
+  padding: 0.2rem 1rem;
+}
+
+#userid-section .userid__container form input.submit-btn {
+  border: none;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+#notes-section {
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+#notes-section .container {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 30% 60%;
+      grid-template-rows: 10% 30% 60%;
+}
+
+#notes-section .container .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+#notes-section .container .form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#notes-section .container .form form {
+  text-align: center;
+}
+
+#notes-section .container .form form textarea {
+  outline: none;
+  width: 60rem;
+  height: 20rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#notes-section .container .form form input {
+  font-size: 1.6rem;
+  padding: 0.2rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+#notes-section .container .notes__container {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 15rem;
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#notes-section .container .notes__container figure {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.2);
+  padding: 2rem;
+  font-size: 1.4rem;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#notes-section .container .notes__container figure:hover > .deleteNote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#notes-section .container .notes__container figure::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#notes-section .container .notes__container figure::-webkit-scrollbar-thumb {
+  background-color: navy;
+}
+
+#notes-section .container .notes__container figure .deleteNote {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  border-radius: 50%;
+  display: none;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+  #notes-section .container .notes__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #notes-section .container .notes__container figure .deleteNote {
+    top: 2%;
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  #notes-section .container .form form textarea {
+    width: 50rem;
+    height: 20rem;
+  }
+  #notes-section .container .notes__container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  #notes-section .container .notes__container figure {
+    width: 100%;
+  }
+  #notes-section .container .notes__container figure .deleteNote {
+    top: 2%;
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #userid-section .userid__container {
+    width: 45rem;
+  }
+  #notes-section .container .form form textarea {
+    width: 45rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

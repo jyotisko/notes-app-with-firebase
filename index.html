@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+  <title>Notes App</title>
+</head>
+
+<body>
+
+  <section id="userid-section">
+    <div class="userid__container">
+      <div class="about">
+        <p>Please enter your user id to get all your saved notes. Note: If you don't have a user id, then a new user
+          will
+          be automatically created.</p>
+      </div>
+      <form autocomplete="off" class="form-user">
+        <label>User Id: </label><input type="text" name="userid" placeholder="User Id">
+        <br>
+        <input class="submit-btn" type="submit" value="Let's create notes!">
+      </form>
+    </div>
+  </section>
+
+  <section id="notes-section">
+    <div class="container">
+      <div class="user-info part">
+        <h2>Logged in as <span class="username"></span></h2>
+      </div>
+      <div class="form part">
+        <form class="add-note-form" autocomplete="off">
+          <textarea name="noteContent" style="resize: horizontal;"></textarea>
+          <br>
+          <input type="submit" value="Add Note">
+        </form>
+      </div>
+      <div class="notes__container part">
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "xxxxxxxxxxx",
+      authDomain: "xxxxxxxx",
+      projectId: "xxxxxxxx",
+      storageBucket: "xxxxxxxx",
+      messagingSenderId: "xxxxxxxx",
+      appId: "xxxxxxxxxxxx"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
